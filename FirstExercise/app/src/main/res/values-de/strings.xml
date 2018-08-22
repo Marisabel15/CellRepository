@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="hints">
+
+        <item>Gib deinen Namen ein</item>
+        <item>Geben Sie Ihren Nachnamen eine</item>
+        <item>Geben Sie Ihr Geburtsdatum ein</item>
+        <item>Gib deine E-Mail Adresse ein</item>
+
+    </array>
+
+    <array name="tags">
+
+        <item>nome</item>
+        <item>sobrenome</item>
+        <item>nascimento</item>
+        <item>email</item>
+
+    </array>
+
+</resources>

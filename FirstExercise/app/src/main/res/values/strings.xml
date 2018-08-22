@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstExercise</string>
+
+    <array name="hints">
+
+        <item>Digite seu nome</item>
+        <item>Digite seu sobrenome</item>
+        <item>Digite sua data de nascimento</item>
+        <item>Digite seu cpf</item>
+        <item>Digite seu email</item>
+        <item>Digite seu telefone</item>
+
+    </array>
+
+    <array name="tags">
+
+        <item>nome</item>
+        <item>sobrenome</item>
+        <item>nascimento</item>
+        <item>cpf</item>
+        <item>email</item>
+        <item>telefone</item>
+
+    </array>
+
+    <string name="nome">Digite seu nome</string>
+    <string name="sobrenome">Digite seu sobrenome</string>
+    <string name="dataNascimento">Digite sua data de nascimento</string>
+    <string name="cpf">Digite seu cpf</string>
+    <string name="email">Digite seu email</string>
+    <string name="telefone">Digite seu telefone</string>
+
+
+    </resources>
