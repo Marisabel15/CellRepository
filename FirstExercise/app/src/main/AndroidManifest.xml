@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".servidor.ClienteActivity" />
-        <activity android:name=".servidor.ContatoActivity"></activity>
+        <activity android:name=".servidor.ContatoActivity"/>
     </application>
 
 </manifest>

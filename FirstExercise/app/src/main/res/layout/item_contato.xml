@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,16 +27,12 @@
         android:layout_height="wrap_content"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sobrenome"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvSobrenome"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:orientation="horizontal">
 
     <TextView
         android:layout_width="match_parent"
@@ -39,6 +45,13 @@
         android:layout_height="wrap_content"
         />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +63,13 @@
         android:layout_height="wrap_content"
         />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,6 +80,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
     <TextView
         android:layout_width="match_parent"
@@ -72,4 +117,7 @@
         android:layout_height="wrap_content"
         />
 
+    </LinearLayout>
+
 </LinearLayout>
+</ScrollView>

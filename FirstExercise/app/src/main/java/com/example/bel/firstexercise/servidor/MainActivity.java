@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] tags;
     public static DadosClienteList dadosClienteList;
     public List<ConfigurarCampo> campos;
-    private String dados = "[{\"nome\": \"Ozzy Osbourne\",  \"telefone\": \"11666666666\",  \"endereço\": \"Rua Java 66\",  \"estado\": \"São Paulo\",  \"email\": \"morcego@gmail.com\",   \"id\":\"01\"}, \\r\\n  \\r\\n{\"nome\": \"Ragnar Lothbrok\",   \"telefone\": \"11888888888\",  \"endereço\": \"Rua Json 88\",  \"estado\": \"São Paulo\",  \"email\":\"vikings@gmail.com\",    \"id\": \"02\"},    \\r\\n  \\r\\n  {\"nome\": \"Justen Bieber\",   \"telefone\": \"11924242424\",  \"endereço\": \"Rua Kotlin 24\",    \"estado\": São Paulo\",    \"email\": \"lessi@gmail.com\", \"id\":\"03\"}, \\r\\n  \\r\\n  {\"nome\": \"Visconde de Sabugosa\",    \"telefone\": \"11555555555\",  \"endereço\": \"Estrada do Html 55\",   \"estado\": São Paulo\",    \"email\": \"milhocozido@gmail.com\",   \"id\": \"04\"},    \\r\\n  \\r\\n  {\"nome\": \"Inês Brasil\", \"telefone\": \"11913131313\",  \"endereço\": \"Avenida Css 13\",   \"estado\": \"São Paulo\",  \"email\": \"ahazany@gmail.com\",   \"id\": \"05}]";
-    //private String contatosStr = "[{\"nome\": \"Ozzy Osbourne\",  \"telefone\": \"11666666666\",  \"endereço\": \"Rua Java 66\",  \"estado\": \"São Paulo\",  \"email\": \"morcego@gmail.com\",   \"id\":\"01\"}, \\r\\n  \\r\\n{\"nome\": \"Ragnar Lothbrok\",   \"telefone\": \"11888888888\",  \"endereço\": \"Rua Json 88\",  \"estado\": \"São Paulo\",  \"email\":\"vikings@gmail.com\",    \"id\": \"02\"},    \\r\\n  \\r\\n  {\"nome\": \"Justen Bieber\",   \"telefone\": \"11924242424\",  \"endereço\": \"Rua Kotlin 24\",    \"estado\": São Paulo\",    \"email\": \"lessi@gmail.com\", \"id\":\"03\"}, \\r\\n  \\r\\n  {\"nome\": \"Visconde de Sabugosa\",    \"telefone\": \"11555555555\",  \"endereço\": \"Estrada do Html 55\",   \"estado\": São Paulo\",    \"email\": \"milhocozido@gmail.com\",   \"id\": \"04\"},    \\r\\n  \\r\\n  {\"nome\": \"Inês Brasil\", \"telefone\": \"11913131313\",  \"endereço\": \"Avenida Css 13\",   \"estado\": \"São Paulo\",  \"email\": \"ahazany@gmail.com\",   \"id\": \"05}]";
+    private String dados = "[{\"nome\": \"Ozzy Osbourne\",  \"telefone\": \"11666666666\",  \"endereço\": \"Rua Java 66\",  \"estado\": \"São Paulo\",  \"email\": \"morcego@gmail.com\",   \"id\":\"01\"}, {\"nome\": \"Ragnar Lothbrok\",   \"telefone\": \"11888888888\",  \"endereço\": \"Rua Json 88\",  \"estado\": \"São Paulo\",  \"email\":\"vikings@gmail.com\",    \"id\": \"02\"},   {\"nome\": \"Justen Bieber\",   \"telefone\": \"11924242424\",  \"endereço\": \"Rua Kotlin 24\",    \"estado\": \"São Paulo\",    \"email\": \"lessi@gmail.com\", \"id\":\"03\"},  {\"nome\": \"Visconde de Sabugosa\",    \"telefone\": \"11555555555\",  \"endereço\": \"Estrada do Html 55\",   \"estado\": \"São Paulo\",    \"email\": \"milhocozido@gmail.com\",   \"id\": \"04\"},  {\"nome\": \"Inês Brasil\", \"telefone\": \"11913131313\",  \"endereço\": \"Avenida Css 13\",   \"estado\": \"São Paulo\",  \"email\": \"ahazany@gmail.com\",   \"id\": \"05\"}]";
+    private String contatosStr = "[{\"nome\": \"Ozzy Osbourne\",  \"telefone\": \"11666666666\",  \"endereço\": \"Rua Java 66\",  \"estado\": \"São Paulo\",  \"email\": \"morcego@gmail.com\",   \"id\":\"01\"}, {\"nome\": \"Ragnar Lothbrok\",   \"telefone\": \"11888888888\",  \"endereço\": \"Rua Json 88\",  \"estado\": \"São Paulo\",  \"email\":\"vikings@gmail.com\",    \"id\": \"02\"},   {\"nome\": \"Justen Bieber\",   \"telefone\": \"11924242424\",  \"endereço\": \"Rua Kotlin 24\",    \"estado\": \"São Paulo\",    \"email\": \"lessi@gmail.com\", \"id\":\"03\"},  {\"nome\": \"Visconde de Sabugosa\",    \"telefone\": \"11555555555\",  \"endereço\": \"Estrada do Html 55\",   \"estado\": \"São Paulo\",    \"email\": \"milhocozido@gmail.com\",   \"id\": \"04\"},  {\"nome\": \"Inês Brasil\", \"telefone\": \"11913131313\",  \"endereço\": \"Avenida Css 13\",   \"estado\": \"São Paulo\",  \"email\": \"ahazany@gmail.com\",   \"id\": \"05\"}]";
     private List<Contato> listContatos;
 
     @Override
@@ -41,29 +41,41 @@ public class MainActivity extends AppCompatActivity {
         List<Contato> contatos = gson.fromJson(dados,new TypeToken<List<Contato>>(){}.getType());
         LinearLayout linearLayoutFirst = findViewById(R.id.llContainer);
 
-        for (Contato contato : contatos) {
-            TextView editText = new TextView (this);
-            TextView textView = new TextView (this);
+       for (Contato contato : contatos) {
+           TextView editText = new TextView (this);
+           TextView textView = new TextView (this);
+           TextView textView1 = new TextView (this);
+           TextView textView2 = new TextView (this);
+           TextView textView3 = new TextView (this);
+           TextView textView4 = new TextView (this);
 
-            editText.setText(contato.getNome());
-            textView.setText(contato.getTelefone());
+           editText.setText(contato.getNome());
+           textView.setText(contato.getTelefone());
+           textView1.setText(contato.getEndereco());
+           textView2.setText(contato.getEstado());
+           textView3.setText(contato.getEmail());
+           textView4.setText(contato.getId());
 
-            linearLayoutFirst.addView(editText);
-            linearLayoutFirst.addView(textView);
+           linearLayoutFirst.addView(editText);
+           linearLayoutFirst.addView(textView);
+           linearLayoutFirst.addView(textView1);
+           linearLayoutFirst.addView(textView2);
+           linearLayoutFirst.addView(textView3);
+           linearLayoutFirst.addView(textView4);
         }
 
-        dadosClienteList = new DadosClienteList();
+        //dadosClienteList = new DadosClienteList();
 
-        inicializarArr();
+        //inicializarArr();
 
-        for (ConfigurarCampo configurarCampo : campos) {
-            EditText editText = new EditText (this);
-            editText.setId(configurarCampo.getId());
-            editText.setHint(configurarCampo.getHint());
-            editText.setTag(configurarCampo.getTag());
+       // for (ConfigurarCampo configurarCampo : campos) {
+            //EditText editText = new EditText (this);
+           // editText.setId(configurarCampo.getId());
+           // editText.setHint(configurarCampo.getHint());
+           // editText.setTag(configurarCampo.getTag());
 
-            linearLayoutFirst.addView(editText);
-        }
+            //linearLayoutFirst.addView(editText);
+       // }
 
         final int childCount = linearLayoutFirst.getChildCount();
 
@@ -131,62 +143,62 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutFirst.addView(btSend);
     }
 
-    private void inicializarArr() {
+   // private void inicializarArr() {
 
-        hints = getResources().getStringArray(R.array.hints);
+        //hints = getResources().getStringArray(R.array.hints);
 
-        tags = getResources().getStringArray(R.array.tags);
+        //tags = getResources().getStringArray(R.array.tags);
 
-        campos = initCampos();
+        //campos = initCampos();
 
-    }
+    //}
 
-    private List<ConfigurarCampo> initCampos(){
+   // private List<ConfigurarCampo> initCampos(){
 
-        List<ConfigurarCampo> list = new ArrayList<>();
+        //List<ConfigurarCampo> list = new ArrayList<>();
 
-        ConfigurarCampo campoNome = new ConfigurarCampo();
-        campoNome.setHint(getResources().getString(R.string.nome));
-        campoNome.setTag("nome");
-        campoNome.setId(1);
+        //ConfigurarCampo campoNome = new ConfigurarCampo();
+        //campoNome.setHint(getResources().getString(R.string.nome));
+       // campoNome.setTag("nome");
+       // campoNome.setId(1);
 
-        list.add(campoNome);
+        //list.add(campoNome);
 
-        ConfigurarCampo campoSobrenome = new ConfigurarCampo();
-        campoSobrenome.setHint(getResources().getString(R.string.sobrenome));
-        campoSobrenome.setTag("sobrenome");
-        campoSobrenome.setId(2);
+        //ConfigurarCampo campoSobrenome = new ConfigurarCampo();
+       // campoSobrenome.setHint(getResources().getString(R.string.sobrenome));
+       // campoSobrenome.setTag("sobrenome");
+       // campoSobrenome.setId(2);
 
-        list.add(campoSobrenome);
+       // list.add(campoSobrenome);
 
-        ConfigurarCampo campoDataNascimento = new ConfigurarCampo();
-        campoDataNascimento.setHint(getResources().getString(R.string.dataNascimento));
-        campoDataNascimento.setTag("dataNascimento");
-        campoDataNascimento.setId(3);
+       // ConfigurarCampo campoDataNascimento = new ConfigurarCampo();
+       // campoDataNascimento.setHint(getResources().getString(R.string.dataNascimento));
+       // campoDataNascimento.setTag("dataNascimento");
+       // campoDataNascimento.setId(3);
 
-        list.add(campoDataNascimento);
+       // list.add(campoDataNascimento);
 
-        ConfigurarCampo campoCpf = new ConfigurarCampo();
-        campoCpf.setHint(getResources().getString(R.string.cpf));
-        campoCpf.setTag("cpf");
-        campoCpf.setId(4);
+       // ConfigurarCampo campoCpf = new ConfigurarCampo();
+       // campoCpf.setHint(getResources().getString(R.string.cpf));
+       // campoCpf.setTag("cpf");
+       // campoCpf.setId(4);
 
-        list.add(campoCpf);
+        //list.add(campoCpf);
 
-        ConfigurarCampo campoEmail = new ConfigurarCampo();
-        campoEmail.setHint(getResources().getString(R.string.email));
-        campoEmail.setTag("email");
-        campoEmail.setId(5);
+       // ConfigurarCampo campoEmail = new ConfigurarCampo();
+       // campoEmail.setHint(getResources().getString(R.string.email));
+        //campoEmail.setTag("email");
+        //campoEmail.setId(5);
 
-        list.add(campoEmail);
+       // list.add(campoEmail);
 
-        ConfigurarCampo campoTelefone = new ConfigurarCampo();
-        campoTelefone.setHint(getResources().getString(R.string.telefone));
-        campoTelefone.setTag("telefone");
-        campoTelefone.setId(6);
+       // ConfigurarCampo campoTelefone = new ConfigurarCampo();
+        //campoTelefone.setHint(getResources().getString(R.string.telefone));
+       // campoTelefone.setTag("telefone");
+      //  campoTelefone.setId(6);
 
-        list.add(campoTelefone);
+      //  list.add(campoTelefone);
 
-        return list;
+       // return list;
 
-    }}
+    }//}
