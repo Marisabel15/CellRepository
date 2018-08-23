@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <LinearLayout
             android:id="@+id/llContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            app:layout_constraintTop_toTopOf="parent">
 
             <Button
                 android:id="@+id/btCliente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lista de Clientes"/>
+                android:layout_width="210dp"
+                android:layout_height="55dp"
+                android:background="#DA0101"
+                android:text="Lista de Clientes"
+                app:layout_constraintRight_toLeftOf="@+id/btContato"/>
 
             <Button
                 android:id="@+id/btContato"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lista de Contatos"/>
+                android:layout_width="210dp"
+                android:layout_height="55dp"
+                android:background="#DA0101"
+                android:text="Lista de Contatos"
+                app:layout_constraintLeft_toRightOf="@+id/btCliente"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llResultado"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvResultado"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/btVoltar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Voltar"/>
+                android:layout_height="match_parent"
+                android:text="Voltar"
+                android:background="#DA0101"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-</ScrollView>
+</android.support.constraint.ConstraintLayout>
 

@@ -1,81 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
 
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="#ACACAC"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
     <TextView
+        android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome"/>
+        android:layout_marginTop="10dp"
+        android:text="Nome:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvNome"/>
 
     <TextView
         android:id="@+id/tvNome"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintStart_toStartOf="@+id/nome"/>
 
     <TextView
+        android:id="@+id/telefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Telefone"/>
+        android:layout_marginTop="10dp"
+        android:text="Telefone:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/tvTelefone"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintStart_toStartOf="@+id/telefone"
+        app:layout_constraintTop_toBottomOf="@+id/tvNome"/>
 
     <TextView
+        android:id="@+id/endereço"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Endereço"/>
+        android:layout_marginTop="10dp"
+        android:text="Endereço:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/telefone"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/tvEndereço"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintStart_toStartOf="@+id/endereço"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefone"/>
 
     <TextView
+        android:id="@+id/estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Estado"/>
+        android:layout_marginTop="10dp"
+        android:text="Estado:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/endereço"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/tvEstado"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintStart_toStartOf="@+id/estado"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndereço"/>
 
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"/>
-
-    <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    <TextView
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Id"/>
+        android:layout_marginTop="10dp"
+        android:text="Email:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/estado"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/tvEstado"/>
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Id:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/tvId"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintStart_toStartOf="@+id/id"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"/>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
 </ScrollView>
+</LinearLayout>
