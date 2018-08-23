@@ -15,7 +15,7 @@ public class Contato {
     @SerializedName("email")
     private String email;
     @SerializedName("id")
-    private int id;
+    private String id;
 
     public Contato() {}
 
@@ -59,11 +59,11 @@ public class Contato {
         this.email = email;
     }
 
-    public int getId (){
+    public String getId (){
         return id;
     }
 
-    public void setId (int id) {
+    public void setId (String id) {
         this.id = id;
     }
 
